@@ -1,0 +1,101 @@
+.wrapper_om_mig {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.wrapper_content {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 100px;
+  margin: 2rem;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0);
+}
+.wrapper_content .left {
+  position: relative;
+  border: 5px solid var(--hvid-tekst-farve);
+  padding: 40px;
+  color: var(--hvid-tekst-farve);
+}
+.wrapper_content .right {
+  position: relative;
+  background-color: var(--hvid-tekst-farve);
+  color: var(--moerk-tekst-farve);
+  padding: 40px;
+}
+.left h5,
+.left h4,
+.left h3,
+.left h2 {
+  color: var(--hvid-tekst-farve);
+}
+
+.profiltekst {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--hvid-tekst-farve);
+}
+.kontakt,
+.uddannelse,
+.sprog,
+.tekst_om_mig,
+.socials,
+.ervherv {
+  margin-bottom: 1rem;
+}
+.wrapper_om_mig a {
+  text-decoration: none;
+  font-family: "links";
+  text-decoration: underline;
+}
+.wrapper_om_mig a:hover {
+  color: var(--moerk-tekst-farve);
+}
+
+.erhverv li {
+  margin-bottom: 2.5rem;
+}
+img {
+  width: 100%;
+}
+@media (min-width: 771px) {
+  .wrapper_content {
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.kontakt {
+  margin-top: 1rem;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+h4 {
+  border-bottom: 1px dotted var(--moerk-tekst-farve);
+  padding-left: 2rem;
+}
+.erhverv p {
+  padding-left: 2rem;
+}
+.erhverv_liste {
+  border-left: 2px solid var(--moerk-tekst-farve);
+  margin-left: 3rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+}
+
+.uddannelse_liste {
+  border-left: 2px solid var(--moerk-tekst-farve);
+  margin-left: 3rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}

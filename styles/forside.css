@@ -1,0 +1,55 @@
+h1,
+h2 {
+  color: var(--hvid-tekst-farve);
+}
+
+h1 {
+  font-family: "forsidetekst_h1";
+  font-size: var(--stor-skrift);
+  padding: 2%;
+}
+h2 {
+  font-family: "forsidetekst_h2";
+  font-size: var(--normal-skrift);
+}
+
+.wrapper_forside {
+  margin: 5rem;
+}
+
+@media (min-width: 700px) {
+  .navn {
+    margin-left: 2rem;
+  }
+  .intro {
+    margin-left: 8rem;
+    margin-right: 2rem;
+  }
+  h1 {
+    font-family: "forsidetekst_h1";
+    font-size: var(--meget-stor-skrift);
+    padding: 2%;
+  }
+  h2 {
+    font-size: var(--mellem-skrift);
+  }
+}
+
+@media (min-width: 1300px) {
+  h1 {
+    font-size: var(--forside-skrift);
+  }
+  h2 {
+    font-size: var(--stor-skrift);
+  }
+  .navn {
+    margin-left: 3rem;
+  }
+  .intro {
+    margin-left: 30rem;
+    margin-right: 2rem;
+  }
+  .wrapper_forside {
+    margin: 5rem;
+  }
+}

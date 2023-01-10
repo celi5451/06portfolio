@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <title>Portfolioeksamen 1SEMMMD</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html" aria-label="Hjem"><img class="logo" src="img/celhoffhan_logo.png" alt="celhoffhan_logo" /></a>
+        </div>
+        <button class="toggle-btn">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link" href="om_mig.html">Om mig & CV</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper_04">
+        <div class="temaer">
+          <a class="T" href="02web.html">
+            <div class="tema">
+              <h2>T02 - Grundlæggende web</h2>
+            </div>
+          </a>
+
+          <a class="T" href="03ux.html">
+            <div class="tema">
+              <h2>T03 - Grundlæggende UX</h2>
+            </div>
+          </a>
+
+          <a class="T" href="04animation.html">
+            <div class="tema">
+              <h2>T04 - Animation</h2>
+            </div>
+          </a>
+
+          <a class="T" href="05indhold.html">
+            <div class="tema">
+              <h2>T05 - Grundlæggende indhold</h2>
+            </div>
+          </a>
+
+          <a class="T" href="06portfolioeksamen.html">
+            <div class="tema">
+              <h2>T06 - Portfolioeksamen</h2>
+            </div>
+          </a>
+        </div>
+
+        <h1>T04 - Animation</h1>
+        <div class="case">
+          <h2>040401 Temaopgave</h2>
+          <div class="case040401">
+            <div class="col_1_1_1">
+              <div>
+                <h3>Spilidé</h3>
+                <p>
+                  Først blev vi undervist i gamemechanics. Ud fra dette valgte jeg, at mit spil skulle være et wack-a-mole-spil. Derefter arbejdede jeg på idéudvikling, papirsprototypen og mit stiludgangspunkt. Mit spildesign tager udgangspunkt i
+                  stilen flatdesign. Min idé har jeg valgt at kalde “Perlespillet”, som går ud på at man skal samle perler, ved at klikke på muslingerne og undgå krabber og piratfisk. Herefter lavede jeg mit aktivitetsdiagram, som demonstrerer hvad
+                  der sker, når man klikker på hvad, og generelt hvordan man enten vinder eller taber spillet.
+                </p>
+              </div>
+              <figure class="billede040401">
+                <img src="img/04_inspo.webp" alt="04_inspo" />
+                <figcaption>Flatdesign til inspiration</figcaption>
+              </figure>
+
+              <figure class="span">
+                <img src="img/aktivitetsdiagram.png" alt="aktivitetsdiagram" />
+                <figcaption>Her ses aktivitetsdiagrammet for mit spil</figcaption>
+              </figure>
+            </div>
+            <div>
+              <h3>Design</h3>
+              <p>
+                Jeg startede med at skitsere alle spilelementer, UI-elementer, infoskærm, spilskærm samt start- og slutskærme i hånden. Derefter rentegnede jeg dem via shapes som vektorgrafik i illustrator for senere at kunne eksportere dem som
+                svg-filer. Til forskel for pixel-grafik (rastergrafik) består vektor-grafik nemlig af matematiske beregninger. Det gør det til en skalerbar grafik, som kan skaleres op uden at miste kvalitet, da formlerne automatisk justeres.
+              </p>
+            </div>
+            <div class="col_1_1_1">
+              <figure class="billede040401">
+                <img src="img/04_step1_strand_skitse..jpeg" alt="skitse1" />
+                <figcaption>Første skitse i hånden</figcaption>
+              </figure>
+              <figure class="billede040401">
+                <img src="img/04_step3_strand_skitse..png" alt="skitse3" />
+                <figcaption>Her ses første step i rentegningen i adobe illustrator</figcaption>
+              </figure>
+              <figure class="billede040401">
+                <img src="img/spilsiden.png" alt="spilsiden" />
+                <figcaption>Her ses det færdige resultat af rentegningen af spilskærmen i illustrator</figcaption>
+              </figure>
+            </div>
+
+            <div>
+              <h3>State-machine-diagram og animationer i javaScript</h3>
+              <div class="col_1_1_1">
+                <p>
+                  Næste step var at få alle spilelementer og -skærme ind på sitet og via html, css og javaScript kompositionere og animere spillet. Vi har lært om css-animationer via keyframes til positionering og transformering ; transform,
+                  translate, rotate, scale. Jeg udarbejdede et state-machine-diagram, som “bygger oven på” aktivitetsdiagrammet. Det er et uddybende flowchart, der viser forskellige states, hvordan de er forbundet, og hvordan de overgår fra ét state
+                  til et andet; f.eks. at miste et liv eller få et point. Et eksempel på et event er “click”. Det er bl.a. disse events, der kan starte og slutte animationer, vise eller skjule elementer, spilskærme osv. Jeg har benyttet
+                  state-machine-diagrammet som skabelon til at kode spillet ved at overføre funktioner, aktiviteter og events, der udløser transitioner beskrevet i diagrammet til min kode. Desuden lærte jeg også om variable, konkatenering af liv, tid
+                  og point samt random startposition og delay. Vi lærte også, hvordan man sætter lyde på spillet.
+                </p>
+                <figure>
+                  <img src="img/klik_krabbe_state_machine.png" alt="klik_krabbe_state_machine" />
+                  <figcaption>Her ses state-machine-digrammet, nærmere for funktionen "clickKrabbe". Man kan se hvordan eventet skifter state (transitions) og sætter gang i animationer</figcaption>
+                </figure>
+                <figure>
+                  <img src="img/klik_krabbe_java.png" alt="klik_krabbe_java" />
+                  <figcaption>Her ses JavaScriptet med funktionen "clickKrabbe".</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="link_domaene">
+            <a href="http://celhoffhan.dk/kea/04_animation/website/spil.html" target="_blank">Link til temaopgave(spillet) på mit domæne</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

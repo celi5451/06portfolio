@@ -1,0 +1,259 @@
+:root {
+  --hvid-tekst-farve: #fff4e9;
+  --moerk-tekst-farve: #615e5b;
+  --hover-tekst-farve: #8f8d8b;
+
+  --lille-skrift: 0.7rem;
+  --normal-skrift: 0.9rem;
+  --mellem-skrift: 1.5rem;
+  --stor-skrift: 2rem;
+  --meget-stor-skrift: 3rem;
+  --forside-skrift: 4rem;
+}
+/*mine fonte*/
+@font-face {
+  font-family: "forsidetekst_h1";
+  src: url(../fonts/oxygen-bold-webfont.woff2);
+}
+@font-face {
+  font-family: "forsidetekst_h2";
+  src: url(../fonts/oxygen-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: "links";
+  src: url(../fonts/oxygen-bold-webfont.woff2);
+}
+
+@font-face {
+  font-family: "broedtekst";
+  src: url(../fonts/oxygen-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: "overskrift";
+  src: url(../fonts/lato-bold-webfont.woff2);
+}
+
+/*2. fjerner al default margin */
+* {
+  margin: 0;
+}
+/*Improve media defaults*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* Remove built-in form typography styles*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* links og header-styling*/
+.logo {
+  width: 30%;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1.5rem;
+  place-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(3rem, 1.2353rem + 3.1373vw, 5rem);
+  place-items: center;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: var(--hvid-tekst-farve);
+  text-decoration: none;
+  font-family: "links";
+}
+
+nav a:hover,
+.active {
+  border-bottom: solid var(--hvid-tekst-farve);
+}
+
+.hide {
+  display: none;
+}
+
+.link_domaene a{   
+  border-bottom: 2px solid var(--moerk-tekst-farve);
+  padding: 5px;
+  margin: 1rem;
+  color: var(--moerk-tekst-farve);
+}
+.link_domaene a:hover{   
+  color: var(--hover-tekst-farve);
+}
+
+
+/* Body og wrapper styling */
+body {
+  background: linear-gradient(#92b7dc, #f67f57);
+  min-height: 1000px;
+  width: 100%;
+  line-height: 1.5;  
+  color: var(--hvid-tekst-farve);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  width: clamp(21.875rem, 7.4636rem + 61.4887vw, 81.25rem);
+  margin-inline: auto;
+}
+
+/*font-styling*/
+h1 {
+  font-family: "overskrift";
+  color: var(--hvid-tekst-farve);
+}
+
+p,
+li {
+  font-family: "broedtekst";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "overskrift";
+  color: var(--moerk-tekst-farve);
+}
+
+figcaption{font-style: italic;}
+
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0px;
+}
+
+
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 810px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .nav-links {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .nav-links {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .nav-links.shown {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 3px solid var(--hvid-tekst-farve);
+    padding-top: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before {
+  width: 2em;
+  height: 4px;
+  background: var(--hvid-tekst-farve);
+  transition: transform 0.7s cubic-bezier(0, 0.01, 0.24, 1);
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  bottom: 8px;
+}
+
+.pressed .hamburger {
+  transform: rotate(-45deg);
+}
+
+.pressed .hamburger::before {
+  /* opacity: 0; */
+  transform: rotate(90deg) translate(8px);
+}
+
+/*styling af nav*/
+
+
+
+/* --link-farve-hover: #fb7e55;
+  --baggrund-farve: #fff4e9;
+  --link-farve2: #615e5b;
+
+  --footer-farve: #e4e6f2;
+  --tekst-farve: #615e5b;
+  --tekst-farve2: #fff4e9;
+  --knap-farve: #ffa36e;
+  --knap-farve-hover: #ff7424;
+
+  .billedezoom:hover {
+  animation: zoom 1s infinite;
+  cursor: pointer;
+}
+
+
+@keyframes zoom {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1.5, 1.5);
+  }}
+
+  .billede_zoom{transform: scale(1);
+transition: 1s;}
+
+.billede_zoom:hover{ transform: scale(1.5);}
