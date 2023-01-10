@@ -94,33 +94,23 @@ nav a:hover,
   display: none;
 }
 
-.link_domaene a{   
+.link_domaene a {
   border-bottom: 2px solid var(--moerk-tekst-farve);
   padding: 5px;
   margin: 1rem;
   color: var(--moerk-tekst-farve);
 }
-.link_domaene a:hover{   
+.link_domaene a:hover {
   color: var(--hover-tekst-farve);
 }
-
 
 /* Body og wrapper styling */
 body {
   background: linear-gradient(#92b7dc, #f67f57);
   min-height: 1000px;
   width: 100%;
-  line-height: 1.5;  
+  line-height: 1.5;
   color: var(--hvid-tekst-farve);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.wrapper {
-  width: clamp(21.875rem, 7.4636rem + 61.4887vw, 81.25rem);
-  margin-inline: auto;
 }
 
 /*font-styling*/
@@ -143,8 +133,9 @@ h6 {
   color: var(--moerk-tekst-farve);
 }
 
-figcaption{font-style: italic;}
-
+figcaption {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -152,7 +143,6 @@ img {
   display: block;
   padding: 0px;
 }
-
 
 /* burgermenu */
 .toggle-btn {
@@ -162,7 +152,6 @@ img {
   min-height: 44px;
   font-size: 1.1rem;
   cursor: pointer;
-
   display: none; /* Skjul knappen som standard */
 }
 
@@ -223,37 +212,3 @@ img {
   /* opacity: 0; */
   transform: rotate(90deg) translate(8px);
 }
-
-/*styling af nav*/
-
-
-
-/* --link-farve-hover: #fb7e55;
-  --baggrund-farve: #fff4e9;
-  --link-farve2: #615e5b;
-
-  --footer-farve: #e4e6f2;
-  --tekst-farve: #615e5b;
-  --tekst-farve2: #fff4e9;
-  --knap-farve: #ffa36e;
-  --knap-farve-hover: #ff7424;
-
-  .billedezoom:hover {
-  animation: zoom 1s infinite;
-  cursor: pointer;
-}
-
-
-@keyframes zoom {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  100% {
-    transform: scale(1.5, 1.5);
-  }}
-
-  .billede_zoom{transform: scale(1);
-transition: 1s;}
-
-.billede_zoom:hover{ transform: scale(1.5);}
